@@ -75,23 +75,23 @@ async def on_message(msg):
 # AULAS
     if 'aulas mieic' in x or 'aulas info' in x:
         await msg.reply('''>                                                     ```fix
-    > --"MEST [segundas (9:00) | quintas (12:00)]"--
-    > ``` <https://isto.é.um.exemplo.com>
+    > --"MEST"--
+    > ``` <https://site.com>
     >
     > ```css
-    > --"PROG [segundas (12:00) | quintas (10:30)]"--
+    > --"PROG"--
     > ```
     >
     > ```bash
-    > --"FIS1 [segundas (10:30) | quartas (8:30)]"--
+    > --"FIS1"--
     > ```
     >
     > ```ini
-    > [--CMAT {quartas (11:30)}--]
+    > [--CMAT--]
     > ```
     >
     > ```diff
-    > --MPCP[quartas (10:00) | quintas (9:00)]--
+    > --MPCP--
     > ```
     ''')
     await client.process_commands(msg)
