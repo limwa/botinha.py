@@ -73,8 +73,8 @@ async def on_message(msg):
         await msg.add_reaction('😷')
 
 # AULAS
-        if 'aulas mieic' in x or 'aulas info' in x:
-            await msg.reply('''>                                                     ```fix
+    if 'aulas mieic' in x or 'aulas info' in x:
+        await msg.reply('''>                                                     ```fix
     > --"MEST [segundas (9:00) | quintas (12:00)]"--
     > ``` <https://isto.é.um.exemplo.com>
     >
