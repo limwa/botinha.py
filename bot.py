@@ -71,6 +71,29 @@ async def on_message(msg):
         await msg.add_reaction('<:residentsleeper:768410966123479043>')
     if 'covid' in x or 'couve' in x or 'corona' in x:
         await msg.add_reaction('😷')
+
+# AULAS
+        if 'aulas mieic' in x or 'aulas info' in x:
+            await msg.reply('''>                                                     ```fix
+    > --"MEST [segundas (9:00) | quintas (12:00)]"--
+    > ``` <https://isto.é.um.exemplo.com>
+    >
+    > ```css
+    > --"PROG [segundas (12:00) | quintas (10:30)]"--
+    > ```
+    >
+    > ```bash
+    > --"FIS1 [segundas (10:30) | quartas (8:30)]"--
+    > ```
+    >
+    > ```ini
+    > [--CMAT {quartas (11:30)}--]
+    > ```
+    >
+    > ```diff
+    > --MPCP[quartas (10:00) | quintas (9:00)]--
+    > ```
+    ''')
     await client.process_commands(msg)
 
 '''MENSAGEM DE ERRO'''
@@ -82,6 +105,7 @@ async def on_command_error(ctx, error):
     print("ERROR", error, type(error))
     if isinstance(error, commands.errors.CommandNotFound):
         await ctx.reply(f'{random.choice(err)}')
+
 
 token=os.getenv('TOKEN', '')
 client.run(token)
