@@ -62,13 +62,15 @@ async def on_message(msg):
             await msg.add_reaction('<:ehehe:761324245308932127>')
         if 'sporting' in x:
             await msg.add_reaction('<:homemsporting:790192696294637578>')
-        if 'ubuntu' in x or 'bash' in x or 'linux' in x or 'sex' in x or 'arch' in x:
+        if 'sex' in x:
             await msg.add_reaction('🇸')
             await msg.add_reaction('🇪')
             await msg.add_reaction('🇽')
             await msg.add_reaction('🇴')
             await msg.add_reaction('💦')
             await msg.add_reaction('👅')
+        if 'ubuntu' in x or 'bash' in x or 'arch' in x or 'linux' in x or 'mint' in x:
+            await msg.add_reaction('🤓')
         if 'quero falecer' in x or'suicidio' in x or 'suicídio' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or'mandar-me' in x or 'mandar me' in x or 'me mandar' in x or 'quero morrer' in x:
             await msg.reply('''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
         if 'dormir' in x or 'sono' in x or 'sleep' in x:
