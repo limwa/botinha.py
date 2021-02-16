@@ -94,6 +94,9 @@ async def on_message(msg):
     > --MPCP--
     > ```
     ''')
+    if 'poll:' in x:
+        await msg.add_reaction('👍')
+        await msg.add_reaxtion('👎')
     await client.process_commands(msg)
 
 '''MENSAGEM DE ERRO'''
