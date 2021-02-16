@@ -73,7 +73,8 @@ async def on_message(msg):
         await msg.add_reaction('😷')
     if 'grr' in x:
         await msg.add_reaction('<:madiana:809032623379972127>')
-
+    if 'frog' in x or '761863843935813672' in x:
+        await msg.add_reaction('🐸')
 # AULAS
     if 'aulas mieic' in x or 'aulas info' in x:
         await msg.reply('''>                                                     ```fix
