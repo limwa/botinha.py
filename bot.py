@@ -34,74 +34,75 @@ op8ball=['Parece-me que sim',' Agora estou a passar a ferro.',''
 async def on_message(msg):
     kek: str = msg.content
     x=kek.lower()
-    if 'b responde ' in x or 'b adivinha ' in x or 'b 8ball' in x or 'b diz ' in x:
-        await msg.reply(f'{random.choice(op8ball)}')
-    if 'cisco' in x:
-        await msg.add_reaction('<:ciscoapoggar:809032623354544178>')
-    if 'aoco' in x or 'mdis' in x or 'torcato' in x:
-        await msg.add_reaction('<:ELIMINAR:767703787712282635>')
-    if 'aoco' in x:
-        await msg.add_reaction('<:weirdcanas:810630123975868426>')
-    if 'amen' in x or 'finalmente' in x or 'politica' in x or 'política' in x:
-        await msg.add_reaction('<:zearezar:809032623480504342>')
-    if 'peras' in x:
-        await msg.add_reaction('<:perasarezar:809032623825485824>')
-        await msg.add_reaction('<:omaria:809032624168763432>')
-        await msg.add_reaction('<:JAVAGAY:799242001173577728>')
-    if 'luisinha' in x:
-        await msg.add_reaction('<:kuisapoggers:809032623758114876>')
-    if 'mano' in x:
-        await msg.add_reaction('<:mano:809032623644082206>')
-    if 'pog' in x or 'lezgo' in x or 'lfg' in x or 'lets go' in x:
-        await msg.add_reaction('<:poggies:789853745855856660>')
-    if 'lima' in x or 'peras' in x or 'gui' in x:
-        await msg.add_reaction('<:ehehe:761324245308932127>')
-    if 'sporting' in x:
-        await msg.add_reaction('<:homemsporting:790192696294637578>')
-    if 'ubuntu' in x or 'bash' in x or 'linux' in x or 'sex' in x or 'arch' in x:
-        await msg.add_reaction('🇸')
-        await msg.add_reaction('🇪')
-        await msg.add_reaction('🇽')
-        await msg.add_reaction('🇴')
-        await msg.add_reaction('💦')
-        await msg.add_reaction('👅')
-    if 'quero falecer' in x or'suicidio' in x or 'suicídio' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or'mandar-me' in x or 'mandar me' in x or 'me mandar' in x or 'quero morrer' in x:
-        await msg.reply('''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
-    if 'dormir' in x or 'sono' in x or 'sleep' in x:
-        await msg.add_reaction('<:residentsleeper:768410966123479043>')
-    if 'covid' in x or 'couve' in x or 'corona' in x:
-        await msg.add_reaction('😷')
-    if 'grr' in x:
-        await msg.add_reaction('<:madiana:809032623379972127>')
-    if 'frog' in x or '317653551939846144' in x:
-        await msg.add_reaction('🐸')
-    if 'balta' in x or '<@!100288993039499264>' in x:
-        await msg.add_reaction('<:balta:811345262151860265>')
-# AULAS
-    if 'aulas mieic' in x or 'aulas info' in x:
-        await msg.reply('''>                                                     ```fix
-    > --"MEST"--
-    > ``` <https://site.com>
-    >
-    > ```css
-    > --"PROG"--
-    > ```
-    >
-    > ```bash
-    > --"FIS1"--
-    > ```
-    >
-    > ```ini
-    > [--CMAT--]
-    > ```
-    >
-    > ```diff
-    > --MPCP--
-    > ```
-    ''')
     if 'poll:' in x:
         await msg.add_reaction('👍')
         await msg.add_reaction('👎')
+    else:
+        if 'b responde ' in x or 'b adivinha ' in x or 'b 8ball' in x or 'b diz ' in x:
+            await msg.reply(f'{random.choice(op8ball)}')
+        if 'cisco' in x:
+            await msg.add_reaction('<:ciscoapoggar:809032623354544178>')
+        if 'aoco' in x or 'mdis' in x or 'torcato' in x:
+            await msg.add_reaction('<:ELIMINAR:767703787712282635>')
+        if 'aoco' in x:
+            await msg.add_reaction('<:weirdcanas:810630123975868426>')
+        if 'amen' in x or 'finalmente' in x or 'politica' in x or 'política' in x:
+            await msg.add_reaction('<:zearezar:809032623480504342>')
+        if 'peras' in x:
+            await msg.add_reaction('<:perasarezar:809032623825485824>')
+            await msg.add_reaction('<:omaria:809032624168763432>')
+            await msg.add_reaction('<:JAVAGAY:799242001173577728>')
+        if 'luisinha' in x:
+            await msg.add_reaction('<:kuisapoggers:809032623758114876>')
+        if 'mano' in x:
+            await msg.add_reaction('<:mano:809032623644082206>')
+        if 'pog' in x or 'lezgo' in x or 'lfg' in x or 'lets go' in x:
+            await msg.add_reaction('<:poggies:789853745855856660>')
+        if 'lima' in x or 'peras' in x or 'gui' in x:
+            await msg.add_reaction('<:ehehe:761324245308932127>')
+        if 'sporting' in x:
+            await msg.add_reaction('<:homemsporting:790192696294637578>')
+        if 'ubuntu' in x or 'bash' in x or 'linux' in x or 'sex' in x or 'arch' in x:
+            await msg.add_reaction('🇸')
+            await msg.add_reaction('🇪')
+            await msg.add_reaction('🇽')
+            await msg.add_reaction('🇴')
+            await msg.add_reaction('💦')
+            await msg.add_reaction('👅')
+        if 'quero falecer' in x or'suicidio' in x or 'suicídio' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or'mandar-me' in x or 'mandar me' in x or 'me mandar' in x or 'quero morrer' in x:
+            await msg.reply('''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
+        if 'dormir' in x or 'sono' in x or 'sleep' in x:
+            await msg.add_reaction('<:residentsleeper:768410966123479043>')
+        if 'covid' in x or 'couve' in x or 'corona' in x:
+            await msg.add_reaction('😷')
+        if 'grr' in x:
+            await msg.add_reaction('<:madiana:809032623379972127>')
+        if 'frog' in x or '317653551939846144' in x:
+            await msg.add_reaction('🐸')
+        if 'balta' in x or '<@!100288993039499264>' in x:
+            await msg.add_reaction('<:balta:811345262151860265>')
+    # AULAS
+        if 'aulas mieic' in x or 'aulas info' in x:
+            await msg.reply('''>                                                     ```fix
+        > --"MEST"--
+        > ``` <https://site.com>
+        >
+        > ```css
+        > --"PROG"--
+        > ```
+        >
+        > ```bash
+        > --"FIS1"--
+        > ```
+        >
+        > ```ini
+        > [--CMAT--]
+        > ```
+        >
+        > ```diff
+        > --MPCP--
+        > ```
+        ''')
     await client.process_commands(msg)
 
 '''MENSAGEM DE ERRO'''
