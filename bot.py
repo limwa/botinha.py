@@ -96,7 +96,7 @@ async def on_message(msg):
     ''')
     if 'poll:' in x:
         await msg.add_reaction('👍')
-        await msg.add_reaxtion('👎')
+        await msg.add_reaction('👎')
     await client.process_commands(msg)
 
 '''MENSAGEM DE ERRO'''
