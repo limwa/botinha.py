@@ -71,6 +71,8 @@ async def on_message(msg):
         await msg.add_reaction('<:residentsleeper:768410966123479043>')
     if 'covid' in x or 'couve' in x or 'corona' in x:
         await msg.add_reaction('😷')
+    if 'grr' in x:
+        await msg.add_reaction('<:madiana:809032623379972127>')
 
 # AULAS
     if 'aulas mieic' in x or 'aulas info' in x:
@@ -108,7 +110,10 @@ async def on_command_error(ctx, error):
     print("ERROR", error, type(error))
     if isinstance(error, commands.errors.CommandNotFound):
         await ctx.reply(f'{random.choice(err)}')
-
+@client.command()
+async def avatar(ctx, *,  avamember : discord.Member=None):
+    userAvatarUrl = avamember.avatar_url
+    await ctx.send(userAvatarUrl)
 
 token=os.getenv('TOKEN', '')
 client.run(token)
