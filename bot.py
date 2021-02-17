@@ -107,8 +107,9 @@ async def on_message(msg):
         ''')
         if 'ramalho' in x:
             await msg.add_reaction('<:OLA:811367924161839174>')
+        if 'comunicado:' in x:
+            await msg.add_reaction('✅')
     await client.process_commands(msg)
-
 '''MENSAGEM DE ERRO'''
 
 err=['Só posso estar a ouvir mal...','Esse comando não existe!', 'Não digas asneiras!', 'Estou surda...', 'Não consigo entender.',
@@ -122,6 +123,9 @@ async def on_command_error(ctx, error):
 async def avatar(ctx, *,  avamember : discord.Member=None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
+@client.command()
+async def joined(ctx, *, member: discord.Member):
+    await ctx.send('<@{0.id}> veio ser feupinho na data: ``{0.joined_at}``'.format(member, member))
 
 token=os.getenv('TOKEN', '')
 client.run(token)
