@@ -177,7 +177,7 @@ async def joined(ctx, *, member: discord.Member):
 
 @client.command()
 async def ping(ctx):
-    await ctx.send('pong xd: ``{0}s``'.format(round(client.latency, 1)))
+    await ctx.send('pong xd: ``{0}s``'.format(round(client.latency, 3)))
 
 token=os.getenv('TOKEN', '')
 client.run(token)
