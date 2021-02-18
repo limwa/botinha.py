@@ -5,8 +5,10 @@ from discord import member
 from discord.ext import commands
 import random
 from discord.ext.commands.core import command
+from discord.ext import commands
+from pretty_help import PrettyHelp
 
-client = commands.Bot(command_prefix=['bot '])
+client = commands.Bot(command_prefix=['bot '],help_command=PrettyHelp())
 
 
 @client.event
@@ -164,9 +166,10 @@ async def on_message(msg):
             'https://conteudo.imguol.com.br/c/entretenimento/02/2017/08/03/cha-verde-1501773798026_v2_1920x1280.jpg')
     if 'pfv leit' in x:
         await msg.reply('Toma, feupinhx')
-        await msg.channel.send(
-            'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-pastry-milk-cookies-16449551597708_300x.jpg?v=1592956486')
-
+        await msg.channel.send('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-pastry-milk-cookies-16449551597708_300x.jpg?v=1592956486')
+#-----especial
+    if 'noodle' in x:
+        await msg.channel.send('<a:ezgif:812000224217661491>')
     await client.process_commands(msg)
 
 
