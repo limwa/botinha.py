@@ -6,9 +6,9 @@ from discord.ext import commands
 import random
 from discord.ext.commands.core import command
 from discord.ext import commands
-from pretty_help import PrettyHelp
 
-client = commands.Bot(command_prefix=['bot '],help_command=PrettyHelp())
+
+client = commands.Bot(command_prefix=['bot '])
 
 
 @client.event
