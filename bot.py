@@ -94,7 +94,7 @@ async def on_message(msg):
         if 'balta' in x or '<@!100288993039499264>' in x:
             await msg.add_reaction('<:balta:811345262151860265>')
         if 'norberto' in x or 'costa freitas' in x or '<@!190968369791369216>' in x:
-            await msg.add_reaction('🇵:regional_indicator_t:')
+            await msg.add_reaction('🇵🇹')
             await msg.add_reaction('🧡')
         # -------------------------FUNNY--------------------------------------
         if 'pfv responde ' in x or 'pfv adivinha ' in x or 'pfv 8ball' in x or 'pfv diz ' in x:
