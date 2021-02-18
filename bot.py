@@ -189,8 +189,10 @@ async def joined(ctx, *, member: discord.Member):
 @client.command()
 async def aulas(ctx):
     embed = discord.Embed()
-    embed.description = '''✏️[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09)  (seg 9:00-10:00 | qua 10:00-11:00)
-    🚀 [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)  (seg 10:00-11:00 | qua 9:00-10:00)
+    embed.title='Aulas MIEIC 1ºAno'
+    embed.color=0x00a0a0
+    embed.description = '''[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09)   (seg 9:00-10:00 | qua 10:00-11:00)
+    [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)                            (seg 10:00-11:00 | qua 9:00-10:00)
     '''
     await ctx.send(embed=embed)
 
