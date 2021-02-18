@@ -127,6 +127,9 @@ async def on_message(msg):
                         > ```
                         ''')
     # ----------BEBIDAS---------BEBIDAS------------BEBIDAS---------BEBIDAS-----------BEBIDAS----------BEBIDAS--------------
+    if 'pfv menu' in x:
+        await msg.reply('Cá está')
+        await msg.channel.send('https://scontent.fopo2-1.fna.fbcdn.net/v/t1.0-0/p526x296/151939569_776368209936853_2010088215326660210_n.jpg?_nc_cat=103&ccb=3&_nc_sid=730e14&_nc_ohc=vvX4OXwKczcAX_A49PY&_nc_ht=scontent.fopo2-1.fna&tp=6&oh=bd32d7d10158aaa680d3a841d72893cd&oe=6051DEB1')
     if 'pfv cafe' in x or 'pfv café' in x:
         await msg.reply('Cafézinho? Dá-me 5 segundos!')
         await msg.channel.send('https://cdn.dribbble.com/users/1172503/screenshots/4477752/coffee.gif')
@@ -144,6 +147,9 @@ async def on_message(msg):
     if 'pfv cappuccino' in x or 'pfv capuccino' in x:
         await msg.reply('Aqui está, feupinhx. Conheces a história do capuchinho vermelho?')
         await msg.channel.reply('https://pngimg.com/uploads/cappuccino/cappuccino_PNG73.png')
+    if 'pfv moccachino' in x:
+        await msg.reply('Here it is, feupinhx')
+        await msg.channel.reply('https://media.istockphoto.com/photos/moccachino-coffee-on-table-top-picture-id502758012?k=6&m=502758012&s=612x612&w=0&h=AsBkeKFSY6PfdbRWfQ8NQqJZUhZ9eRkq6rX1kzlHr7U=p')
     if 'pfv chocolate quente' in x:
         await msg.channel.send('Chocolatinho quentinho! O meu preferido!')
         await msg.reply(
