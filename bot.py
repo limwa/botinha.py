@@ -158,9 +158,13 @@ async def on_message(msg):
         await msg.reply('Toma, feupinhx')
         await msg.channel.send('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-pastry-milk-cookies-16449551597708_300x.jpg?v=1592956486')
 #-----especial
+    emoji_miminho=['<a:hug:812076950155558912>','<a:beijinho:812078357361066024>']
     if 'noodle' in x:
         await msg.channel.send('<a:ezgif:812000224217661491>')
+    if 'miminho' in x:
+        await msg.channel.send(f'{random.choice(emoji_miminho)}')
     await client.process_commands(msg)
+
 
 
 @client.command()
