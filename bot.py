@@ -114,19 +114,19 @@ async def on_message(msg):
             await msg.reply('''>                                                     ```fix
                         > --"MEST"--
                         > ``` <https://site.com>
-                        >
+                        > 
                         > ```css
                         > --"PROG"--
                         > ```
-                        >
+                        > 
                         > ```bash
                         > --"FIS1"--
-                        > ```
-                        >
+                        > ``` <https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09>
+                        > 
                         > ```ini
                         > [--CMAT--]
                         > ```
-                        >
+                        > 
                         > ```diff
                         > --MPCP--
                         > ```
