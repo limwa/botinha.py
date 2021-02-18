@@ -111,26 +111,13 @@ async def on_message(msg):
             await msg.channel.send('<:ban:798887475254657074>')
         # --------------------------ÚTIL--------------------------------------
         if 'aulas mieic' in x or 'aulas info' in x:
-            await msg.reply('''>                                                     ```fix
-                        > --"MEST"--
-                        > ``` <https://site.com>
-                        > 
-                        > ```css
-                        > --"PROG"--
-                        > ```
-                        > 
-                        > ```bash
-                        > --"FIS1"--
-                        > ``` <https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09>
-                        > 
-                        > ```ini
-                        > [--CMAT--]
-                        > ```
-                        > 
-                        > ```diff
-                        > --MPCP--
-                        > ```
-                        ''')
+            embed = discord.Embed()
+            embed.title = 'Aulas 1ºAno MIEIC'
+            embed.color = 0x00a0a0
+            embed.description = '''[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) \n(seg 9:00-10:00 | qua 10:00-11:00)
+                   [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
+                   '''
+            await msg.reply(embed=embed)
     # ----------BEBIDAS---------BEBIDAS------------BEBIDAS---------BEBIDAS-----------BEBIDAS----------BEBIDAS--------------
     if 'pfv menu' in x:
         await msg.reply('Cá está')
@@ -185,16 +172,6 @@ async def avatar(ctx, *, avamember: discord.Member = None):
 @client.command()
 async def joined(ctx, *, member: discord.Member):
     await ctx.send('<@{0.id}> veio ser feupinho na data: ``{0.joined_at}``'.format(member, member))
-
-@client.command()
-async def aulas(ctx):
-    embed = discord.Embed()
-    embed.title='Aulas 1ºAno MIEIC'
-    embed.color=0x00a0a0
-    embed.description = '''[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) \n(seg 9:00-10:00 | qua 10:00-11:00)
-    [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
-    '''
-    await ctx.send(embed=embed)
 
 @client.command()
 async def ping(ctx):
