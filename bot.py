@@ -186,6 +186,13 @@ async def avatar(ctx, *, avamember: discord.Member = None):
 async def joined(ctx, *, member: discord.Member):
     await ctx.send('<@{0.id}> veio ser feupinho na data: ``{0.joined_at}``'.format(member, member))
 
+@client.command()
+async def aulas(ctx):
+    embed = discord.Embed()
+    embed.description = '''[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09)
+    [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)
+    '''
+    await ctx.send(embed=embed)
 
 @client.command()
 async def ping(ctx):
