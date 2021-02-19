@@ -72,7 +72,7 @@ async def on_message(msg):
             await msg.add_reaction('<:mano:809032623644082206>')
         if 'pog' in x or 'lezgo' in x or 'lfg' in x or 'lets go' in x:
             await msg.add_reaction('<:poggies:789853745855856660>')
-        if 'lima' in x or 'peras' in x or 'gui' in x:
+        if 'lima' in x or 'peras' in x or 'gui ' in x:
             await msg.add_reaction('<:ehehe:761324245308932127>')
         if 'sporting' in x:
             await msg.add_reaction('<:homemsporting:790192696294637578>')
