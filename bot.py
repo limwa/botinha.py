@@ -99,7 +99,7 @@ async def on_message(msg):
         # -------------------------FUNNY--------------------------------------
         if 'pfv responde ' in x or 'pfv adivinha ' in x or 'pfv 8ball' in x or 'pfv diz ' in x:
             await msg.reply(f'{random.choice(op8ball)}')
-        if 'quero falecer' in x or 'suicid' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or 'mandar-me' in x or 'mandar me' in x or 'me mandar' in x or 'quero morrer' in x:
+        if 'quero falecer' in x or 'suicid' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or 'mandar-me' in x or 'mandar me' in x or 'me mandar ' in x or 'quero morrer' in x:
             await msg.reply(
                 '''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
         if 'dormir' in x or 'sono' in x or 'sleep' in x:
