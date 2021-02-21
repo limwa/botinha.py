@@ -110,7 +110,7 @@ async def on_message(msg):
             await msg.delete()
             await msg.channel.send('<:ban:798887475254657074>')
         # --------------------------ÚTIL--------------------------------------
-        if 'aulas mieic' in x or 'aulas info' in x or 'bot aulas' in x:
+        if 'aulas mieic' in x or 'aulas info' in x:
             embed = discord.Embed()
             embed.title = 'Aulas 1ºAno MIEIC'
             embed.color = 0x00a0a0
