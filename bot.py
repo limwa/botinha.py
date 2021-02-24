@@ -114,9 +114,11 @@ async def on_message(msg):
             embed = discord.Embed()
             embed.title = 'Aulas 1ºAno MIEIC'
             embed.color = 0x00a0a0
-            embed.description = '''[CMAT](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) \n(seg 9:00-10:00 | qua 10:00-11:00)
+            embed.description = '''[CMAT] \n([seg 9:00-10:00](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) | [qua 10:00-11:00](https://videoconf-colibri.zoom.us/j/86166483975?pwd=VlRZelRvbjJzMmtXc1dsMDlnNTh0QT09))
             [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
             [PROG](https://teams.microsoft.com/l/meetup-join/19%3a0a486ea7628247de956d27755601308e%40thread.tacv2/1613845204726?context=%7b%22Tid%22%3a%22b7821bc8-67cc-447b-b579-82f7854174fc%22%2c%22Oid%22%3a%22775956a4-e725-4eef-9eb9-da5057c8a6a6%22%7d) \n(seg 11:00-12:30 | qui 9:00-10:30)
+            [MPCP](https://videoconf-colibri.zoom.us/j/81799571785?pwd=T0U2NEdCTkd6ODhFMmVoTTJ3bHA2dz09) \n(qui 10:30-12:30)
+            [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)
             '''
 
             await msg.reply(embed=embed)
