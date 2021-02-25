@@ -118,7 +118,7 @@ async def on_message(msg):
             
             [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
             
-            [PROG](https://teams.microsoft.com/l/meetup-join/19%3a0a486ea7628247de956d27755601308e%40thread.tacv2/1613845204726?context=%7b%22Tid%22%3a%22b7821bc8-67cc-447b-b579-82f7854174fc%22%2c%22Oid%22%3a%22775956a4-e725-4eef-9eb9-da5057c8a6a6%22%7d) \n(seg 11:00-12:30 | qui 9:00-10:30)
+            [PROG](https://teams.microsoft.com/l/channel/19%3a0a486ea7628247de956d27755601308e%40thread.tacv2/Geral?groupId=b05f83cd-100e-4c31-a797-146513c69887&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc) \n(seg 11:00-12:30 | qui 9:00-10:30)
             
             [MPCP](https://videoconf-colibri.zoom.us/j/81799571785?pwd=T0U2NEdCTkd6ODhFMmVoTTJ3bHA2dz09) \n(qui 10:30-12:30)
             
@@ -171,9 +171,9 @@ async def on_message(msg):
         await msg.channel.send('<a:ezgif:812000224217661491>')
     if 'miminho' in x:
         await msg.channel.send(f'{random.choice(emoji_miminho)}')
+    if 'trabalho de mest' in x:
+        await msg.channel.send('https://media.discordapp.net/attachments/759882556744663040/814471856445718548/magik.png?width=254&height=240')
     await client.process_commands(msg)
-
-
 
 @client.command()
 async def avatar(ctx, *, avamember: discord.Member = None):
