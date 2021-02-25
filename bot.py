@@ -171,8 +171,8 @@ async def on_message(msg):
         await msg.channel.send('<a:ezgif:812000224217661491>')
     if 'miminho' in x:
         await msg.channel.send(f'{random.choice(emoji_miminho)}')
-    if 'trabalho de mest' in x:
-        await msg.channel.send('https://media.discordapp.net/attachments/759882556744663040/814471856445718548/magik.png?width=254&height=240')
+    if 'trabalho de mest' in x or 'projeto de mest' in x:
+        await msg.reply('<:despair:814474380721651732>')
     await client.process_commands(msg)
 
 @client.command()
