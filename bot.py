@@ -101,7 +101,7 @@ async def on_message(msg):
             embed.title = '✨🔮 Bola de Cristal 🔮✨'
             embed.color = 0x50327c
             embed.set_image(url='https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg')
-            embed.description = '💬 **Pergunta**: {0}\n\n💬 O **grande mestre Botinho** diz: **{1}**'.format(x[6:],random.choice(op8ball))
+            embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(x[6:],random.choice(op8ball))
             await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
             await asyncio.sleep(3)
             await msg.channel.send(embed=embed)
