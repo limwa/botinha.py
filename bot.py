@@ -194,8 +194,25 @@ async def on_message(msg):
             embed.color = 0xffc0cb
         embed.description = 'És {0}% waifu. {1}'.format(n, y)
         await msg.reply(embed=embed)
+    if 'pfv penis' in x:
+        embed = discord.Embed()
+        embed.title = 'Penis Meter'
+        n = random.randint(0, 101)
+        if n < 25:
+            z = '8----------------------------------------------D'
+            embed.color = 0xff0000
+        elif n < 50:
+            z = '8----------D'
+            embed.color = 0xffa500
+        elif n < 75:
+            z = '8--D'
+            embed.color = 0x0000ff
+        else:
+            z = '8D'
+            embed.color = 0xffc0cb
+        embed.description = '{z}'.format(z)
+        await msg.reply(embed=embed)
     await client.process_commands(msg)
-
 
 @client.command()
 async def avatar(ctx, *, avamember: discord.Member = None):
