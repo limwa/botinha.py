@@ -96,8 +96,15 @@ async def on_message(msg):
             await msg.add_reaction('🇵🇹')
             await msg.add_reaction('🧡')
         # -------------------------FUNNY--------------------------------------
-        if 'pfv responde ' in x or 'pfv adivinha ' in x or 'pfv 8ball' in x or 'pfv diz ' in x:
-            await msg.reply(f'{random.choice(op8ball)}')
+        if x.startswith('!8ball'):
+            embed = discord.Embed()
+            embed.title = '✨🔮 Bola de Cristal 🔮✨'
+            embed.color = 0x50327c
+            embed.set_image(url='https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg')
+            embed.description = '\n**Pergunta**: {0}\n\nO **grande mestre Botinho** diz: **{1}**'.format(x[6:],random.choice(op8ball))
+            await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
+            await asyncio.sleep(3)
+            await msg.channel.send(embed=embed)
         if 'quero falecer' in x or 'suicid' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or 'mandar-me' in x or 'mandar me' in x or 'me mandar ' in x or 'quero morrer' in x:
             await msg.reply(
                 '''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
