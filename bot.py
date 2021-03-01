@@ -210,7 +210,7 @@ async def on_message(msg):
         else:
             z = '8D'
             embed.color = 0xffc0cb
-        embed.description = '{z}'.format(z)
+        embed.description = '{0}'.format(z)
         await msg.reply(embed=embed)
     await client.process_commands(msg)
 
