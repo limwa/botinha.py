@@ -7,7 +7,6 @@ import random
 from discord.ext.commands.core import command
 from discord.ext import commands
 
-
 client = commands.Bot(command_prefix=['bot '])
 
 
@@ -115,13 +114,13 @@ async def on_message(msg):
             embed.title = 'Aulas 1ºAno MIEIC'
             embed.color = 0x00a0a0
             embed.description = '''\nCMAT \n([seg](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) 9:00-10:00 | [qua](https://videoconf-colibri.zoom.us/j/86166483975?pwd=VlRZelRvbjJzMmtXc1dsMDlnNTh0QT09) 10:00-11:00)
-            
+
             [FIS1](https://videoconf-colibri.zoom.us/j/82373725282?pwd=S1VrNEp4VkZYR2o1TUlPUW1hLzVhZz09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
-            
+
             [PROG](https://teams.microsoft.com/l/channel/19%3a0a486ea7628247de956d27755601308e%40thread.tacv2/Geral?groupId=b05f83cd-100e-4c31-a797-146513c69887&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc) \n(seg 11:00-12:30 | qui 9:00-10:30)
-            
+
             [MPCP](https://videoconf-colibri.zoom.us/j/81799571785?pwd=T0U2NEdCTkd6ODhFMmVoTTJ3bHA2dz09) \n(qui 10:30-12:30)
-            
+
             [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)
             '''
 
@@ -129,7 +128,8 @@ async def on_message(msg):
     # ----------BEBIDAS---------BEBIDAS------------BEBIDAS---------BEBIDAS-----------BEBIDAS----------BEBIDAS--------------
     if 'pfv menu' in x:
         await msg.reply('Cá está')
-        await msg.channel.send('https://scontent.fopo2-1.fna.fbcdn.net/v/t1.0-0/p526x296/151939569_776368209936853_2010088215326660210_n.jpg?_nc_cat=103&ccb=3&_nc_sid=730e14&_nc_ohc=vvX4OXwKczcAX_A49PY&_nc_ht=scontent.fopo2-1.fna&tp=6&oh=bd32d7d10158aaa680d3a841d72893cd&oe=6051DEB1')
+        await msg.channel.send(
+            'https://scontent.fopo2-1.fna.fbcdn.net/v/t1.0-0/p526x296/151939569_776368209936853_2010088215326660210_n.jpg?_nc_cat=103&ccb=3&_nc_sid=730e14&_nc_ohc=vvX4OXwKczcAX_A49PY&_nc_ht=scontent.fopo2-1.fna&tp=6&oh=bd32d7d10158aaa680d3a841d72893cd&oe=6051DEB1')
     if 'pfv cafe' in x or 'pfv café' in x:
         await msg.reply('Cafézinho? Dá-me 5 segundos!')
         await msg.channel.send('https://cdn.dribbble.com/users/1172503/screenshots/4477752/coffee.gif')
@@ -149,7 +149,8 @@ async def on_message(msg):
         await msg.channel.reply('https://pngimg.com/uploads/cappuccino/cappuccino_PNG73.png')
     if 'pfv moccachino' in x:
         await msg.reply('Here it is, feupinhx')
-        await msg.channel.reply('https://media.istockphoto.com/photos/moccachino-coffee-on-table-top-picture-id502758012?k=6&m=502758012&s=612x612&w=0&h=AsBkeKFSY6PfdbRWfQ8NQqJZUhZ9eRkq6rX1kzlHr7U=p')
+        await msg.channel.reply(
+            'https://media.istockphoto.com/photos/moccachino-coffee-on-table-top-picture-id502758012?k=6&m=502758012&s=612x612&w=0&h=AsBkeKFSY6PfdbRWfQ8NQqJZUhZ9eRkq6rX1kzlHr7U=p')
     if 'pfv chocolate quente' in x:
         await msg.channel.send('Chocolatinho quentinho! O meu preferido!')
         await msg.reply(
@@ -164,9 +165,11 @@ async def on_message(msg):
             'https://conteudo.imguol.com.br/c/entretenimento/02/2017/08/03/cha-verde-1501773798026_v2_1920x1280.jpg')
     if 'pfv leit' in x:
         await msg.reply('Toma, feupinhx')
-        await msg.channel.send('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-pastry-milk-cookies-16449551597708_300x.jpg?v=1592956486')
-#-----especial
-    emoji_miminho=['<a:hug:812076950155558912>','<a:beijinho:812078357361066024>', '<a:rena_gorda:812079912960786492>']
+        await msg.channel.send(
+            'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-pastry-milk-cookies-16449551597708_300x.jpg?v=1592956486')
+    # -----especial
+    emoji_miminho = ['<a:hug:812076950155558912>', '<a:beijinho:812078357361066024>',
+                     '<a:rena_gorda:812079912960786492>']
     if 'noodle' in x:
         await msg.channel.send('<a:ezgif:812000224217661491>')
     if 'miminho' in x:
@@ -174,6 +177,7 @@ async def on_message(msg):
     if 'trabalho de mest' in x or 'projeto de mest' in x:
         await msg.reply('<:despair:814474380721651732>')
     await client.process_commands(msg)
+
 
 @client.command()
 async def avatar(ctx, *, avamember: discord.Member = None):
@@ -185,9 +189,23 @@ async def avatar(ctx, *, avamember: discord.Member = None):
 async def joined(ctx, *, member: discord.Member):
     await ctx.send('<@{0.id}> veio ser feupinho na data: ``{0.joined_at}``'.format(member, member))
 
+
 @client.command()
 async def ping(ctx):
     await ctx.send('pong xd: ``{0}s``'.format(round(client.latency, 3)))
 
+
+@client.command()
+async def waifu(ctx):
+    n = random.randint(0, 101)
+    if n < 25:
+        x = '🤢'
+    elif n < 50:
+        x = '😳'
+    elif n < 75:
+        x = '☺'
+    else:
+        x = '😻'
+    await ctx.send('És {0}% waifu. {1}'.format(n, x))
 token=os.getenv('TOKEN', '')
 client.run(token)
