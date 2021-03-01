@@ -100,7 +100,11 @@ async def on_message(msg):
             embed = discord.Embed()
             embed.title = '✨🔮 Bola de Cristal 🔮✨'
             embed.color = 0x50327c
-            embed.set_image(url='https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg')
+            img = ['https://www.lcmb.co.uk/wp-content/uploads/Crystal-ball.png',
+                   'https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg',
+                   'https://ak.picdn.net/shutterstock/videos/7716544/thumb/1.jpg',
+                   'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3ae5f272857309.5bf5a63d4a181.png']
+            embed.set_image(url=random.choice(img))
             embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(x[6:],random.choice(op8ball))
             await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
             await asyncio.sleep(3)
