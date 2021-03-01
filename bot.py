@@ -109,9 +109,16 @@ async def on_message(msg):
             await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
             await asyncio.sleep(3)
             await msg.channel.send(embed=embed)
-        if 'quero falecer' in x or 'suicid' in x or 'me matar' in x or 'atirar-me' in x or 'atirar me' in x or 'me atirar' in x or 'mandar-me' in x or 'mandar me' in x or 'me mandar ' in x or 'quero morrer' in x:
-            await msg.reply(
-                '''> :telephone: **SOS ESTUDANTE**  ``96 955 45 45 ou 808 200 204 (20h à 1h)`` \n > http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas''')
+        if 'suicid' in msgc or 'suícid' in msgc or 'ero me matar' in msgc or 'ero morrer' in msgc or 'ero falecer' in msgc:
+            em = discord.Embed()
+            em.title = 'A tua vida importa ♥'
+            em.color = 0x04D1FF
+            img = ['https://the-gist.org/wp-content/uploads/2020/07/Mental-Health-Emma-Garcia-Melchor_crop.png',
+                   'https://www.voicesofyouth.org/sites/voy/files/images/2020-03/3._courtesy_mymindourhumanity_campaign.jpg',
+                   'https://workingwise.nz/wp-content/uploads/2020/06/mentalwellbeing.jpg']
+            em.set_image(url=random.choice(img))
+            em.description = ':telephone: **SOS ESTUDANTE:**  969 554 545 ou 808 200 204 (20h à 1h) \n\n [Mais números e informações - números de saúde mental](http://www.adcl.org.pt/observatorio/servicos.php?titulo=Linhas)'
+            await msg.reply(embed=em)
         if 'dormir' in x or 'sono' in x or 'sleep' in x:
             await msg.add_reaction('<:residentsleeper:768410966123479043>')
         if 'covid' in x or 'couve' in x or 'corona' in x:
