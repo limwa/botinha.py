@@ -197,34 +197,10 @@ async def on_message(msg):
     if 'pfv penis' in x:
         embed = discord.Embed()
         embed.title = 'Penis Meter'
-        n = random.randint(0, 101)
-        if n < 5:
-            z = '8----------------------------------------------D'
-            embed.color = 0xff0000
-        elif n<10:
-            embed.color = 0xff0000
-            z= '8------------------------------------------D'
-        elif n<20:
-            embed.color = 0xff0000
-            z= '8--------------------------------D'
-        elif n < 30:
-            z = '8------------------D'
-            embed.color = 0xffa500
-        elif n <40:
-            embed.color = 0x67537e
-            z='8------------D'
-        elif n < 60:
-            z = '8---------D'
-            embed.color = 0x0000ff
-        elif n<70:
-            z= '8-------D'
-            embed.color= 0x67537e
-        elif n<85:
-            z='8--D'
-        else:
-            z = '8D'
-            embed.color = 0xffc0cb
-        embed.description = '{0}'.format(z)
+        b = random.randint(0, 10)
+        embed.color = 0xffc0cb
+        d= "8" + "-" * b + "D"
+        embed.description = d
         await msg.reply(embed=embed)
     await client.process_commands(msg)
 
