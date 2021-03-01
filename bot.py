@@ -176,6 +176,24 @@ async def on_message(msg):
         await msg.channel.send(f'{random.choice(emoji_miminho)}')
     if 'trabalho de mest' in x or 'projeto de mest' in x:
         await msg.reply('<:despair:814474380721651732>')
+    if 'pfv waifu' in x:
+        embed = discord.Embed()
+        embed.title = 'Waifu Meter'
+        n = random.randint(0, 101)
+        if n < 25:
+            y = '🤢'
+            embed.color = 0xff0000
+        elif n < 50:
+            y = '😳'
+            embed.color = 0xffa500
+        elif n < 75:
+            y = '☺'
+            embed.color = 0x0000ff
+        else:
+            y = '😻'
+            embed.color = 0xffc0cb
+        embed.description = 'És {0}% waifu. {1}'.format(n, y)
+        await msg.reply(embed=embed)
     await client.process_commands(msg)
 
 
@@ -194,18 +212,5 @@ async def joined(ctx, *, member: discord.Member):
 async def ping(ctx):
     await ctx.send('pong xd: ``{0}s``'.format(round(client.latency, 3)))
 
-
-@client.command()
-async def waifu(ctx):
-    n = random.randint(0, 101)
-    if n < 25:
-        x = '🤢'
-    elif n < 50:
-        x = '😳'
-    elif n < 75:
-        x = '☺'
-    else:
-        x = '😻'
-    await ctx.send('És {0}% waifu. {1}'.format(n, x))
 token=os.getenv('TOKEN', '')
 client.run(token)
