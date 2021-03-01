@@ -197,7 +197,7 @@ async def on_message(msg):
     if 'pfv penis' in x:
         embed = discord.Embed()
         embed.title = 'Penis Meter'
-        b = random.randint(0, 10)
+        b = random.randint(0, 40)
         embed.color = 0xffc0cb
         d= "8" + "-" * b + "D"
         embed.description = d
