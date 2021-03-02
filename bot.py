@@ -53,6 +53,10 @@ async def on_message(msg):
         await msg.add_reaction('✅')
     else:
         # -----------------------------EMOJIS USERS-----------------------------------------------
+        emojis=['cisco','aoco','mdis','torcato','amen','políti','politi', 'finalmente', 'comunis',
+                'peras','luisinha','mano','pog','lezgo','lfg',"let's go",'lets go','lima','gui ','sporting','sexo',
+                'ubuntu','bash','arch','linux','mint','grr','317653551939846144','frog', 'balta','<@!100288993039499264>',
+                'norberto', '<@!190968369791369216>']
         if 'cisco' in x:
             await msg.add_reaction('<:ciscoapoggar:809032623354544178>')
         if 'aoco' in x or 'mdis' in x or 'torcato' in x:
@@ -109,7 +113,7 @@ async def on_message(msg):
             await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
             await asyncio.sleep(3)
             await msg.channel.send(embed=embed)
-        if 'suicid' in x or 'suícid' in x or 'ero me matar' in x or 'ero morrer' in x or 'ero falecer' in x:
+        if 'suicid' in x or 'suícid' in x or 'ero me matar' in x or 'ero morrer' in x or 'ero falecer' in x or 'me matar' in x:
             em = discord.Embed()
             em.title = 'A tua vida importa ♥'
             em.color = 0x04D1FF
