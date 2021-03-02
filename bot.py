@@ -109,7 +109,7 @@ async def on_message(msg):
             await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
             await asyncio.sleep(3)
             await msg.channel.send(embed=embed)
-        if 'suicid' in msgc or 'suícid' in msgc or 'ero me matar' in msgc or 'ero morrer' in msgc or 'ero falecer' in msgc:
+        if 'suicid' in x or 'suícid' in x or 'ero me matar' in x or 'ero morrer' in x or 'ero falecer' in x:
             em = discord.Embed()
             em.title = 'A tua vida importa ♥'
             em.color = 0x04D1FF
