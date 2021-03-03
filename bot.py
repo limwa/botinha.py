@@ -100,7 +100,7 @@ async def on_message(msg):
             await msg.add_reaction('🇵🇹')
             await msg.add_reaction('🧡')
         # -------------------------FUNNY--------------------------------------
-        if x.startswith('pfv 8ball '):
+        if x.startswith('pfv 8ball'):
             embed = discord.Embed()
             embed.title = '✨🔮 Bola de Cristal 🔮✨'
             embed.color = 0x50327c
