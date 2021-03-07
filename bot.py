@@ -233,7 +233,7 @@ async def avatar(ctx, *, avamember: discord.Member = None):
 
 @client.command()
 async def link(ctx):
-    await ctx.reply(https://discord.gg/bQp7H5vpcX)
+    await ctx.reply('https://discord.gg/bQp7H5vpcX')
 
 @client.command()
 async def joined(ctx, *, member: discord.Member):
