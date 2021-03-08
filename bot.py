@@ -53,7 +53,7 @@ async def on_message(msg):
             if i == '|':
                 count = count + 1
         for i in range(count):
-            await msg.add_reaction(react[count])
+            await msg.add_reaction(react[i])
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
     if 'escolha de dias:' in x:
