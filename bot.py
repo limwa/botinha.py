@@ -51,9 +51,9 @@ async def on_message(msg):
         await msg.add_reaction('👎')
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
-    if 'escolha de dias:':
+    if 'escolha de dias:' in x:
         await msg.channel.send('''**Escolhe o dia**\n:green_circle: - segunda
-                               :yellow_circle: - terça
+:yellow_circle: - terça
 :orange_circle: -  quarta
 :red_circle: - quinta
 :purple_circle: - sexta
