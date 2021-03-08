@@ -52,7 +52,7 @@ async def on_message(msg):
         for i in x:
             if i == '|':
                 count = count + 1
-        for j in range(count+1):
+        for j in range(1,count+1):
             await msg.add_reaction(react[j])
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
