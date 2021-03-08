@@ -52,13 +52,13 @@ async def on_message(msg):
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
     if 'escolha de dias:' in x:
-        await msg.add_reaction(':green_circle:')
-        await msg.add_reaction(':yellow_circle:')
-        await msg.add_reaction(':orange_circle:')
-        await msg.add_reaction(':red_circle:')
-        await msg.add_reaction(':purple_circle:')
-        await msg.add_reaction(':blue_circle:')
-        await msg.add_reaction(':white _circle:')
+        await msg.add_reaction('🟢')
+        await msg.add_reaction('🟡')
+        await msg.add_reaction('🟠')
+        await msg.add_reaction('🔴')
+        await msg.add_reaction('🟣')
+        await msg.add_reaction('🔵')
+        await msg.add_reaction('⚪')
 
     else:
         # -----------------------------EMOJIS USERS-----------------------------------------------
