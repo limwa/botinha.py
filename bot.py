@@ -51,6 +51,22 @@ async def on_message(msg):
         await msg.add_reaction('👎')
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
+    if 'escolha de dias:':
+        await msg.channel.send('''**Escolhe o dia**\n:green_circle: - segunda
+                               :yellow_circle: - terça
+:orange_circle: -  quarta
+:red_circle: - quinta
+:purple_circle: - sexta
+:blue_circle:- sábado
+:white_circle: - 14/3 domingo)''')
+        await msg.add_reaction(':green_circle:')
+        await msg.add_reaction(':yellow_circle:')
+        await msg.add_reaction(':orange_circle:')
+        await msg.add_reaction(':red_circle:')
+        await msg.add_reaction(':purple_circle:')
+        await msg.add_reaction(':blue_circle:')
+        await msg.add_reaction(':white _circle:')
+
     else:
         # -----------------------------EMOJIS USERS-----------------------------------------------
         emojis=['cisco','aoco','mdis','torcato','amen','políti','politi', 'finalmente', 'comunis',
@@ -79,7 +95,7 @@ async def on_message(msg):
             await msg.add_reaction('<:ehehe:761324245308932127>')
         if 'sporting' in x:
             await msg.add_reaction('<:homemsporting:790192696294637578>')
-        if 'sex' in x:
+        if 'sex' in x and 'sexta' not in x:
             await msg.add_reaction('🇸')
             await msg.add_reaction('🇪')
             await msg.add_reaction('🇽')
