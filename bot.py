@@ -47,13 +47,17 @@ async def on_message(msg):
     m: str = msg.content
     x = m.lower()
     if 'poll:' in x:
-        count=1
-        react={1:'🇦',2:'🇧',3:'🇨',4:'🇩',5:'🇪',6:'🇫',7:'🇬',8:'🇭',9:'🇮',10:'🇯'}
-        for i in x:
-            if i == '|':
-                count = count + 1
-        for j in range(1,count+1):
-            await msg.add_reaction(react[j])
+        if '|' not in x:
+            await msg.add_reaction('👍')
+            await msg.add_reaction('👎')
+        else:
+            count=1
+            react={1:'🇦',2:'🇧',3:'🇨',4:'🇩',5:'🇪',6:'🇫',7:'🇬',8:'🇭',9:'🇮',10:'🇯'}
+            for i in x:
+                if i == '|':
+                    count = count + 1
+            for j in range(1,count+1):
+                await msg.add_reaction(react[j])
     if 'comunicado:' in x:
         await msg.add_reaction('✅')
     if 'escolha de dias:' in x:
