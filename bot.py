@@ -242,6 +242,8 @@ async def on_message(msg):
         d= "8" + "-" * b + "D"
         embed.description = d
         await msg.reply(embed=embed)
+    if '<:sus:814208083840073820>' in x:
+        await msg.add_reaction('<:sus:814208083840073820>')
     await client.process_commands(msg)
 
 @client.command()
