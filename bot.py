@@ -244,6 +244,9 @@ async def on_message(msg):
         await msg.reply(embed=embed)
     if '<:sus:814208083840073820>' in x or 'sus' in x:
         await msg.add_reaction('<:sus:814208083840073820>')
+    if 'caralho' in x:
+        caralho=[]
+        for i in range(7):
     await client.process_commands(msg)
 
 @client.command()
