@@ -261,8 +261,8 @@ async def link(ctx):
 
 @client.command()
 async def joined(ctx, *, member: discord.Member):
-    await ctx.send('<@{0.id}> veio ser feupinho na data: ``{0.joined_at}``'.format(member, member))
-
+    j = str(member.joined_at)[8:10] + '-' + str(member.joined_at)[5:7] + '-' + str(member.joined_at)[:4]
+    await ctx.send('<@{0.id}> veio ser feupinho na data: ``{1}``'.format(member, j))
 
 @client.command()
 async def ping(ctx):
