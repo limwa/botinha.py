@@ -248,6 +248,8 @@ async def on_message(msg):
         caralho=['🇨', '🇦','🇷', '🅰️', '🇱','🇭', '🇴']
         for c in range(7):
             await msg.add_reaction(caralho[c])
+    if 'montes' in x:
+        await msg.add_reaction('<:pogmontes:796338915077652480>')
     await client.process_commands(msg)
 
 @client.command()
