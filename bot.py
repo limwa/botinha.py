@@ -250,6 +250,8 @@ async def on_message(msg):
             await msg.add_reaction(caralho[c])
     if 'montes' in x:
         await msg.add_reaction('<:pogmontes:796338915077652480>')
+    if 'pj' in x:
+        await msg.add_reaction('<:PJ:819363210243080283>')
     await client.process_commands(msg)
 
 @client.command()
