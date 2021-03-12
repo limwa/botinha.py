@@ -252,6 +252,8 @@ async def on_message(msg):
         await msg.add_reaction('<:pogmontes:796338915077652480>')
     if 'pj' in x:
         await msg.add_reaction('<:PJ:819363210243080283>')
+    if 'que fofo' in x:
+        await msg.channel.send('<:kawaii1:819912868862230559> <:kawaii2:819913513215721523> <:kawaii3:819913780283703336> <:kawaii4:819914015332892702> <:kawaii5:819914294841704468> <:kawaii6:819914623909625876> <:kawaii7:819914641546412052>')
     await client.process_commands(msg)
 
 @client.command()
