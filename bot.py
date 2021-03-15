@@ -42,8 +42,8 @@ async def on_command_error(ctx, error):
 @client.event
 async def on_message(msg):
     m: str = msg.content.lower()
-    if msg.guild.get_role(815327091163267092) in msg.author.roles:
-        await msg.delete()
+    '''if msg.guild.get_role(815327091163267092) in msg.author.roles:
+        await msg.delete()'''
     if m.startswith('poll:'):
         if '|' not in m:
             await msg.add_reaction('👍')
@@ -99,6 +99,19 @@ async def on_message(msg):
         await msg.reply(embed=embed)
     elif m.startswith('pfv link') or m.startswith('pfv invite'):
         await msg.reply('https://discord.gg/bQp7H5vpcX')
+    elif m.startswith('pfv mock '):
+        m=list(m)
+        final_mock=''
+        for letter_mock in m[8:]:
+            choices_mock = [letter_mock.lower(), letter_mock.upper()]
+            if letter_mock.isalpha():
+                v_mock=random.choice(choices_mock)
+                final_mock+=v_mock
+            else:
+                final_mock+=letter_mock
+        await msg.channel.send(final_mock + ' <:mock:820984871152648232>')
+    elif m.startswith('pls mock'):
+        await msg.reply('Já pensaste em usar "pfv mock"? <:uwu:763885294872690688> ')
 
     else:
         # -----------------------------EMOJIS USERS-----------------------------------------------
@@ -120,7 +133,7 @@ async def on_message(msg):
             await msg.add_reaction('<:mano:809032623644082206>')
         if 'pog' in m or 'lezgo' in m or 'lfg' in m or 'lets go' in m:
             await msg.add_reaction('<:poggies:789853745855856660>')
-        if 'lima' in m or 'peras' in m or 'gui ' in m:
+        if 'lima' in m or 'peras' in m or 'gui ' in m or m=='gui' or ' gui' in m:
             await msg.add_reaction('<:ehehe:761324245308932127>')
         if '247137294459338752' in m:
             await msg.add_reaction('<:perasarezar:809032623825485824>')
@@ -219,5 +232,20 @@ async def ping(ctx):
 async def membros(ctx):
     await ctx.send(ctx.guild.member_count)
 
+@client.command()
+async def dm(ctx, member: discord.Member, *, content):
+    channel = await member.create_dm()
+    de_dm='``DE: '+ctx.author.name +'``'
+    img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
+           'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
+           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg']
+    embed_dm = discord.Embed()
+    embed_dm.set_image(url=random.choice(img))
+    embed_dm.title='Tens correio! 📬 ' +'\n'+ de_dm
+    embed_dm.description='**Mensagem: ** \n"'+content+'"'
+    #await channel.send(cute_msg+de_dm+content+'"``')
+    await channel.send(embed=embed_dm)
+    await ctx.message.delete()
+    
 token=os.getenv('TOKEN', '')
 client.run(token)
