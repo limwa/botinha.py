@@ -238,7 +238,14 @@ async def dm(ctx, member: discord.Member, *, content):
     de_dm='``DE: '+ctx.author.name +'``'
     img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
            'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
-           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg']
+           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg',
+           'https://www.wackyteez.pt/wp-content/uploads/2020/03/0619-you-got-mail-300x300.jpg,'
+           'https://i.pinimg.com/474x/f7/a2/c8/f7a2c85d39643e89a69308cb60ce05e6.jpg',
+           'https://thumbs.dreamstime.com/b/cute-reindeer-hat-celebration-happy-christmas-stamp-vector-illustration-cute-reindeer-celebration-happy-christmas-stamp-159883847.jpg',
+           'https://wallpaperaccess.com/full/30883.jpg',
+           'https://i.pinimg.com/originals/0c/e2/98/0ce298dd994bb48470553ad9616903d8.jpg',
+           'https://thumbs.dreamstime.com/b/doodle-cute-little-cat-vector-isolated-doodle-cute-little-cat-vector-sketch-isolated-148121617.jpg',
+           'https://ih1.redbubble.net/image.517066233.4716/st,small,507x507-pad,600x600,f8f8f8.jpg']
     embed_dm = discord.Embed()
     embed_dm.set_image(url=random.choice(img))
     embed_dm.title='Tens correio! 📬 ' +'\n'+ de_dm
@@ -246,6 +253,6 @@ async def dm(ctx, member: discord.Member, *, content):
     #await channel.send(cute_msg+de_dm+content+'"``')
     await channel.send(embed=embed_dm)
     await ctx.message.delete()
-    
+
 token=os.getenv('TOKEN', '')
 client.run(token)
