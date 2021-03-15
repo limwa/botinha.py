@@ -9,9 +9,11 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix=['bot '])
 
+
 @client.event
 async def on_ready():
     print('Prontinho!')
+
 
 @client.event
 async def on_ready():
@@ -39,6 +41,7 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.errors.CommandNotFound):
         await ctx.reply(f'{random.choice(erro)}')
 
+
 @client.event
 async def on_message(msg):
     m: str = msg.content.lower()
@@ -49,28 +52,70 @@ async def on_message(msg):
             await msg.add_reaction('👍')
             await msg.add_reaction('👎')
         else:
-            poll_count=1
-            poll_react={1:'🇦',2:'🇧',3:'🇨',4:'🇩',5:'🇪',6:'🇫',7:'🇬',8:'🇭',9:'🇮',10:'🇯'}
+            poll_count = 1
+            poll_react = {1: '🇦', 2: '🇧', 3: '🇨', 4: '🇩', 5: '🇪', 6: '🇫', 7: '🇬', 8: '🇭', 9: '🇮', 10: '🇯'}
             for poll_sep in m:
                 if poll_sep == '|':
                     poll_count = poll_count + 1
-            for poll_v in range(1,poll_count+1):
+            for poll_v in range(1, poll_count + 1):
                 await msg.add_reaction(poll_react[poll_v])
     elif m.startswith('comunicado:'):
         await msg.add_reaction('✅')
     elif m.startswith('pfv 8ball'):
-            embed = discord.Embed()
-            embed.title = '✨🔮 Bola de Cristal 🔮✨'
-            embed.color = 0x50327c
-            img = ['https://www.lcmb.co.uk/wp-content/uploads/Crystal-ball.png',
-                   'https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg',
-                   'https://ak.picdn.net/shutterstock/videos/7716544/thumb/1.jpg',
-                   'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3ae5f272857309.5bf5a63d4a181.png']
-            embed.set_image(url=random.choice(img))
-            embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(m[9:],random.choice(op8ball))
-            await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
-            await asyncio.sleep(3)
-            await msg.channel.send(embed=embed)
+        embed = discord.Embed()
+        embed.title = '✨🔮 Bola de Cristal 🔮✨'
+        embed.color = 0x50327c
+        img = ['https://www.lcmb.co.uk/wp-content/uploads/Crystal-ball.png',
+               'https://images-na.ssl-images-amazon.com/images/I/617uBdvFrmL._AC_SX425_.jpg',
+               'https://ak.picdn.net/shutterstock/videos/7716544/thumb/1.jpg',
+               'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3ae5f272857309.5bf5a63d4a181.png']
+        embed.set_image(url=random.choice(img))
+        embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(m[9:],
+                                                                                                         random.choice(
+                                                                                                             op8ball))
+        await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
+        await asyncio.sleep(3)
+        await msg.channel.send(embed=embed)
+    elif m.startswith('pfv ajuda') or m.startswith('pfv help'):
+        embed_help = discord.Embed()
+        embed_help.color = (0x00FA9A)
+        embed_help.title = ('🙋 Ajuda 🙋')
+        embed_help.description = ('''Com que então pediste ajuda! Cá estou eu para te ajudar! 🔮
+
+        **-----------------PREFIXO PFV-----------------**
+
+***pfv 8bal [pergunta] →*** perdidx da vida? Mestre Botinho diz-te
+***pfv waifu →*** owo
+***pfv penis →*** mede-te a genitália (acho)
+***pfv link** →*** dá-te um link para mandares invite aos teus amigos
+***pfv mock [frasE paRA DaR MOCk] → ***dá mock
+
+
+**-----------------PREFIXO BOT-----------------**
+
+***bot avatar @user ->*** mostra o avatar da pessoa em grande
+***bot joined @user →*** diz a data na qual o user se juntou ao server
+***bot ping →*** um bocado inútil
+***bot membros → ***retorna o número de membros do server (para melhorar)
+***bot dm @user [mensagem]→*** manda uma mensagem privada com uma imagem fofinha
+
+
+**-----------------EASTER EGGS 🐣----------------- **
+
+miminho
+noodle
+trabalho de mest
+aulas mieic/aulas info
+... e bastantes reações
+
+*INFO → o calado neste momento está desativado*
+
+**Gostaste? 🤩 Considera dar-me uma estrelinha:**
+https://github.com/golangis/botinha.py
+        ''')
+        channel = await msg.author.create_dm()
+        await channel.send(embed=embed_help)
+
     elif m.startswith('pfv waifu'):
         embed = discord.Embed()
         embed.title = 'Waifu Meter'
@@ -94,21 +139,21 @@ async def on_message(msg):
         embed.title = 'Penis Meter'
         b = random.randint(0, 40)
         embed.color = 0xffc0cb
-        d= "8" + "-" * b + "D"
+        d = "8" + "-" * b + "D"
         embed.description = d
         await msg.reply(embed=embed)
     elif m.startswith('pfv link') or m.startswith('pfv invite'):
         await msg.reply('https://discord.gg/bQp7H5vpcX')
     elif m.startswith('pfv mock '):
-        m=list(m)
-        final_mock=''
+        m = list(m)
+        final_mock = ''
         for letter_mock in m[8:]:
             choices_mock = [letter_mock.lower(), letter_mock.upper()]
             if letter_mock.isalpha():
-                v_mock=random.choice(choices_mock)
-                final_mock+=v_mock
+                v_mock = random.choice(choices_mock)
+                final_mock += v_mock
             else:
-                final_mock+=letter_mock
+                final_mock += letter_mock
         await msg.channel.send(final_mock + ' <:mock:820984871152648232>')
     elif m.startswith('pls mock'):
         await msg.reply('Já pensaste em usar "pfv mock"? <:uwu:763885294872690688> ')
@@ -133,7 +178,7 @@ async def on_message(msg):
             await msg.add_reaction('<:mano:809032623644082206>')
         if 'pog' in m or 'lezgo' in m or 'lfg' in m or 'lets go' in m:
             await msg.add_reaction('<:poggies:789853745855856660>')
-        if 'lima' in m or 'peras' in m or 'gui ' in m or m=='gui' or ' gui' in m:
+        if 'lima' in m or 'peras' in m or 'gui ' in m or m == 'gui' or ' gui' in m:
             await msg.add_reaction('<:ehehe:761324245308932127>')
         if '247137294459338752' in m:
             await msg.add_reaction('<:perasarezar:809032623825485824>')
@@ -183,7 +228,7 @@ async def on_message(msg):
             await msg.channel.send(f'{random.choice(emoji_miminho)}')
         if 'trabalho de mest' in m or 'projeto de mest' in m:
             await msg.reply('<:despair:814474380721651732>')
-#---------------ÚTIL----------------------
+        # ---------------ÚTIL----------------------
         if 'mata-te' in m or 'mata te' in m:
             await msg.delete()
             await msg.channel.send('<:ban:798887475254657074>')
@@ -215,44 +260,44 @@ async def on_message(msg):
             await msg.reply(embed=embed_aulas)
     await client.process_commands(msg)
 
+
 @client.command()
 async def avatar(ctx, *, avamember: discord.Member = None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
+
+
 @client.command()
 async def joined(ctx, *, member: discord.Member):
     j = str(member.joined_at)[8:10] + '-' + str(member.joined_at)[5:7] + '-' + str(member.joined_at)[:4]
     await ctx.send('<@{0.id}> veio ser feupinho na data: ``{1}``'.format(member, j))
 
+
 @client.command()
 async def ping(ctx):
     await ctx.send('pong xd: ``{0}s``'.format(round(client.latency, 3)))
+
 
 @client.command()
 async def membros(ctx):
     await ctx.send(ctx.guild.member_count)
 
+
 @client.command()
 async def dm(ctx, member: discord.Member, *, content):
     channel = await member.create_dm()
-    de_dm='``DE: '+ctx.author.name +'``'
+    de_dm = '``DE: ' + ctx.author.name + '``'
     img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
            'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
-           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg',
-           'https://www.wackyteez.pt/wp-content/uploads/2020/03/0619-you-got-mail-300x300.jpg,'
-           'https://i.pinimg.com/474x/f7/a2/c8/f7a2c85d39643e89a69308cb60ce05e6.jpg',
-           'https://thumbs.dreamstime.com/b/cute-reindeer-hat-celebration-happy-christmas-stamp-vector-illustration-cute-reindeer-celebration-happy-christmas-stamp-159883847.jpg',
-           'https://wallpaperaccess.com/full/30883.jpg',
-           'https://i.pinimg.com/originals/0c/e2/98/0ce298dd994bb48470553ad9616903d8.jpg',
-           'https://thumbs.dreamstime.com/b/doodle-cute-little-cat-vector-isolated-doodle-cute-little-cat-vector-sketch-isolated-148121617.jpg',
-           'https://ih1.redbubble.net/image.517066233.4716/st,small,507x507-pad,600x600,f8f8f8.jpg']
+           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg']
     embed_dm = discord.Embed()
     embed_dm.set_image(url=random.choice(img))
-    embed_dm.title='Tens correio! 📬 ' +'\n'+ de_dm
-    embed_dm.description='**Mensagem: ** \n"'+content+'"'
-    #await channel.send(cute_msg+de_dm+content+'"``')
+    embed_dm.title = 'Tens correio! 📬 ' + '\n' + de_dm
+    embed_dm.description = '**Mensagem: ** \n"' + content + '"'
+    # await channel.send(cute_msg+de_dm+content+'"``')
     await channel.send(embed=embed_dm)
     await ctx.message.delete()
+
 
 token=os.getenv('TOKEN', '')
 client.run(token)
