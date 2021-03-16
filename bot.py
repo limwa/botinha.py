@@ -289,7 +289,15 @@ async def dm(ctx, member: discord.Member, *, content):
     de_dm = '``DE: ' + ctx.author.name + '``'
     img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
            'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
-           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg']
+           'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg',
+           'https://i.pinimg.com/564x/57/f8/a5/57f8a50f34f1100304ecbf84ea7fae3a.jpg',
+           'https://www.wackyteez.pt/wp-content/uploads/2020/03/0619-you-got-mail-300x300.jpg',
+           'https://thumbs.dreamstime.com/b/cute-reindeer-hat-celebration-happy-christmas-stamp-vector-illustration-cute-reindeer-celebration-happy-christmas-stamp-159883847.jpg',
+           'https://www.clipartkey.com/mpngs/m/121-1213018_mailbox-mail-delivery-puppy-dog-pet-cute-animal.png',
+           'https://i.pinimg.com/474x/1d/46/5e/1d465e140e179041471efa5c8c979b7a.jpg',
+           'https://i.pinimg.com/originals/bb/55/87/bb5587c6bf9284c3420abcd2f69e4275.jpg',
+           'https://static.boredpanda.com/blog/wp-content/uploads/2019/12/62144452_2261755747276811_7262549243119500388_n-5df0419c10749__700.jpg',
+           'https://i.pinimg.com/originals/d7/24/77/d7247773ffec90ae53aff3aa2eeafc9e.jpg']
     embed_dm = discord.Embed()
     embed_dm.set_image(url=random.choice(img))
     embed_dm.title = 'Tens correio! 📬 ' + '\n' + de_dm
