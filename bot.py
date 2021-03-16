@@ -297,7 +297,11 @@ async def dm(ctx, member: discord.Member, *, content):
            'https://i.pinimg.com/474x/1d/46/5e/1d465e140e179041471efa5c8c979b7a.jpg',
            'https://i.pinimg.com/originals/bb/55/87/bb5587c6bf9284c3420abcd2f69e4275.jpg',
            'https://static.boredpanda.com/blog/wp-content/uploads/2019/12/62144452_2261755747276811_7262549243119500388_n-5df0419c10749__700.jpg',
-           'https://i.pinimg.com/originals/d7/24/77/d7247773ffec90ae53aff3aa2eeafc9e.jpg']
+           'https://i.pinimg.com/originals/d7/24/77/d7247773ffec90ae53aff3aa2eeafc9e.jpg',
+           'https://media.discordapp.net/attachments/761863843935813672/821416203355947018/doggomail2.jpg?width=507&height=380',
+           'https://media.discordapp.net/attachments/761863843935813672/821416206937882683/foxymail.jpg?width=478&height=675',
+           'https://media.discordapp.net/attachments/761863843935813672/821416201166651443/doggomail3.jpg?width=508&height=508',
+           ]
     embed_dm = discord.Embed()
     embed_dm.set_image(url=random.choice(img))
     embed_dm.title = 'Tens correio! 📬 ' + '\n' + de_dm
