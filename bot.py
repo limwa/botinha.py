@@ -287,7 +287,7 @@ async def membros(ctx):
 async def dm(ctx, member: discord.Member, *, content):
     channel = await member.create_dm()
     de_dm = '``Mensagem Anónima!``'
-    print('recebe: ', member,'\nmanda: ',ctx.author.name)
+    print('POSTAL! Recebe: ', member,' Manda: ',ctx.author.name)
     img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
            'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
            'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg',
