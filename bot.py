@@ -45,8 +45,8 @@ async def on_command_error(ctx, error):
 @client.event
 async def on_message(msg):
     m: str = msg.content.lower()
-    '''if msg.guild.get_role(815327091163267092) in msg.author.roles:
-        await msg.delete()'''
+    if msg.guild.get_role(815327091163267092) in msg.author.roles:
+        await msg.delete()
     if m.startswith('poll:'):
         if '|' not in m:
             await msg.add_reaction('👍')
