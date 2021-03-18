@@ -43,7 +43,7 @@ async def on_command_error(ctx, error):
 
 
 @client.event
-async def on_message(msg):
+async def on_message(msg: discord.Message):
     m: str = msg.content.lower()
     if msg.guild.get_role(815327091163267092) in msg.author.roles:
         await msg.delete()
@@ -70,9 +70,7 @@ async def on_message(msg):
                'https://ak.picdn.net/shutterstock/videos/7716544/thumb/1.jpg',
                'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3ae5f272857309.5bf5a63d4a181.png']
         embed.set_image(url=random.choice(img))
-        embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(m[9:],
-                                                                                                         random.choice(
-                                                                                                             op8ball))
+        embed.description = '💬 **Pergunta**: {0}\n\n🧙 O **grande mestre Botinho** diz: **{1}**'.format(m[9:], random.choice(op8ball))
         await msg.channel.send('https://i.gifer.com/YVPG.gif', delete_after=3.0)
         await asyncio.sleep(3)
         await msg.channel.send(embed=embed)
@@ -145,15 +143,9 @@ https://github.com/golangis/botinha.py
     elif m.startswith('pfv link') or m.startswith('pfv invite'):
         await msg.reply('https://discord.gg/bQp7H5vpcX')
     elif m.startswith('pfv mock '):
-        m = list(m)
-        final_mock = ''
-        for letter_mock in m[8:]:
-            choices_mock = [letter_mock.lower(), letter_mock.upper()]
-            if letter_mock.isalpha():
-                v_mock = random.choice(choices_mock)
-                final_mock += v_mock
-            else:
-                final_mock += letter_mock
+        if msg.author.bot:
+            return
+        final_mock = "".join(random.choice([letter_mock.lower(), letter_mock.upper()]) for letter_mock in m[8:])
         await msg.channel.send(final_mock + ' <:mock:820984871152648232>')
     elif m.startswith('pls mock'):
         await msg.reply('Já pensaste em usar "pfv mock"? <:uwu:763885294872690688> ')
@@ -287,7 +279,7 @@ async def membros(ctx):
 async def dm(ctx, member: discord.Member, *, content):
     channel = await member.create_dm()
     de_dm = '``Mensagem Anónima!``'
-    print('POSTAL! Recebe: ', member,' Manda: ',ctx.author.name)
+    print('POSTAL! Recebe: ', member, ' Manda: ', ctx.author.name)
     img = ['https://i.pinimg.com/originals/63/f0/cf/63f0cfb389116145c4f74b95ee83c0a4.jpg',
            'https://image.dhgate.com/0x0s/f2-albu-g8-M00-B8-01-rBVaV1w1WLqAPtMhABEyHzVVJ9c694.jpg/love-letter-enamel-pin-mail-delivery-turtle.jpg',
            'https://pbs.twimg.com/media/D-K1BWqUIAI7Xx8.jpg',
@@ -312,5 +304,5 @@ async def dm(ctx, member: discord.Member, *, content):
     await ctx.message.delete()
 
 
-token=os.getenv('TOKEN', '')
+token = os.getenv('TOKEN', '')
 client.run(token)
