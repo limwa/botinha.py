@@ -143,8 +143,6 @@ https://github.com/golangis/botinha.py
     elif m.startswith('pfv link') or m.startswith('pfv invite'):
         await msg.reply('https://discord.gg/bQp7H5vpcX')
     elif m.startswith('pfv mock '):
-        if msg.author.bot:
-            return
         final_mock = "".join(random.choice([letter_mock.lower(), letter_mock.upper()]) for letter_mock in m[8:])
         await msg.channel.send(final_mock + ' <:mock:820984871152648232>')
     elif m.startswith('pls mock'):
